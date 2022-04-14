@@ -33,7 +33,18 @@ view: orders {
     sql: ${TABLE}.user_id ;;
   }
 
-  parameter: test_parameter {}
+  parameter: parameter_with_no_allowed_values {type:string}
+  parameter: parameter_with_allowed_values {
+    type: string
+    allowed_value: {
+      label: "Test"
+      value: "test"
+    }
+    allowed_value: {
+      label: "More Test"
+      value: "moretest"
+    }
+  }
 
   measure: count {
     type: count
