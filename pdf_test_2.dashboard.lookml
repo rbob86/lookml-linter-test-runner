@@ -1,7 +1,7 @@
-- dashboard: preferred_viewer_dashboards
-  title: "Preferred Viewer: dashboards"
+- dashboard: preferred_viewer_dashboards_next
+  title: "Preferred Viewer: dashboards-next"
   layout: newspaper
-  preferred_viewer: dashboards
+  preferred_viewer: dashboards-next
   description: ''
   elements:
   - title: Test PDF
