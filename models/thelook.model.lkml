@@ -6,7 +6,7 @@ include: "/pdf_test.dashboard"
 include: "/pdf_test_2.dashboard"
 
 datagroup: thelook_default_datagroup {
-  # sql_trigger: SELECT MAX(id) FROM etl_log;;
+  sql_trigger: SELECT 1;;
   max_cache_age: "1 hour"
 }
 
@@ -106,6 +106,17 @@ explore: inventory_items {
 }
 
 explore: orders {
+  aggregate_table: rollup__status {
+    query: {
+      dimensions: [status]
+      measures: [users.count]
+      timezone: "America/Los_Angeles"
+    }
+
+    materialization: {
+      datagroup_trigger: thelook_default_datagroup
+    }
+  }
   join: users {
     type: left_outer
     sql_on: ${orders.user_id} = ${users.id} ;;
