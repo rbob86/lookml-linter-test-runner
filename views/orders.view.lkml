@@ -1,5 +1,5 @@
 view: orders {
-  sql_table_name: demo_db.orders ;;
+  sql_table_name:  demo_db.orders ;;
   drill_fields: [id]
 
   dimension: id {
@@ -49,6 +49,11 @@ view: orders {
   measure: count {
     type: count
     drill_fields: [detail*]
+  }
+
+  measure: sum_id {
+    type: number
+    sql: SUM(${id}) ;;
   }
 
   # ----- Sets of fields for drilling ------
