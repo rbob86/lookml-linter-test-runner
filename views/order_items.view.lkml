@@ -20,6 +20,11 @@ view: order_items {
     sql: ${TABLE}.order_id ;;
   }
 
+  dimension: reference {
+    type: number
+    sql: ${order_id} ;;
+  }
+
   dimension_group: returned {
     type: time
     timeframes: [
