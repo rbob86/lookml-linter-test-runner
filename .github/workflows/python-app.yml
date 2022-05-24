@@ -36,9 +36,7 @@ jobs:
       run: |
         cd .github
         cd lookml-linter-main
-        ls -lah
-        cd linter
-        python -m main.py
+        python -m linter.main
         echo "Hello World"
 
 
