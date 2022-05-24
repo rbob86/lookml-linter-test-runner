@@ -38,7 +38,7 @@ jobs:
         cd lookml-linter-main
         ls -lah
         cd linter
-        python main.py
+        python -m main.py
         echo "Hello World"
 
 
