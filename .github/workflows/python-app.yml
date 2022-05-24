@@ -35,6 +35,12 @@ jobs:
     - name: Snazzy Linter
       run: |
         cd .github
+        cd lookml-linter-main
+        ls -lah
+        cd linter
+        python main.py
+        echo "Hello World"
+
 
 
        
