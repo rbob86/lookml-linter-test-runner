@@ -15,6 +15,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: try repo
+    - uses: /rbob86/lookml-linter@v1
     - name: Set up Python 3.10
       uses: actions/setup-python@v2
       with:
