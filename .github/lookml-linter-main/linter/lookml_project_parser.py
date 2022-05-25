@@ -16,7 +16,7 @@ class LookMlProjectParser:
         '''
         if os.path.isdir(LookMlProjectParser.root_file_path):
             lkml_filepaths = [f for f in glob.glob(
-                os.path.join(LookMlProjectParser.root_file_path, '*.lkml'), recursive=True)]
+                LookMlProjectParser.root_file_path + "**/*.lkml", recursive=True) if not(f.startswith('.'))]
         else:
             raise IOError("Directory does not exist: %s" %
                           LookMlProjectParser.root_file_path)
