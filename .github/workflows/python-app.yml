@@ -33,6 +33,7 @@ jobs:
         
     - name: Snazzy Linter
       run: |
+        cd ..
         ls -lah
         python -m .github/lookml-linter-main/linter.main config.example.yaml
         echo "Hello World"
