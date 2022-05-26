@@ -35,7 +35,7 @@ jobs:
       run: |
         cd ..
         ls -lah
-        python -m .github/lookml-linter-main/linter.main config.example.yaml
+        pwd
         echo "Hello World"
 
 
