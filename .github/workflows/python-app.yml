@@ -15,8 +15,8 @@ jobs:
     steps:
       - name: actions
       - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0 # Only needed if using setuptools-scm
+ 
+          
       - name: Set up Python 3.10
       - uses: actions/setup-python@v2
         with:
@@ -31,8 +31,6 @@ jobs:
           pip install jsonschema 
           pip install pytest
           pip install lkml
-
-        
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
           python -m .github/lookml-linter-main/linter.main config.example.yaml
           echo "Hello World"
