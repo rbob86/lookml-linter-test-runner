@@ -14,9 +14,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: try repo
-    - uses: /rbob86/lookml-linter@v1
     - name: Set up Python 3.10
       uses: actions/setup-python@v2
       with:
@@ -36,6 +33,7 @@ jobs:
         
     - name: Snazzy Linter
       run: |
+        ls -lah
         python -m .github/lookml-linter-main/linter.main config.example.yaml
         echo "Hello World"
 
