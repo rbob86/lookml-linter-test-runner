@@ -35,5 +35,7 @@ jobs:
         
     - name: Snazzy Linter
       run: |
+        ls -lah
+        pwd
         python -m linter.main config.example.yaml
-        echo "Hello World"
+
