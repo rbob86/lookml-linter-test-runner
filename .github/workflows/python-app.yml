@@ -21,6 +21,7 @@ jobs:
     - uses: actions/checkout@v2
     - uses: rbob86/lookml-linter@v3
     - run: |
+        ls -lah
         pwd
         python -m pip install --upgrade pip
         pip install looker-sdk
