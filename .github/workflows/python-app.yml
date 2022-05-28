@@ -15,9 +15,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: rbob86/lookml-linter@vmain
-    - run: |
-        echo "This is the workspace"
-        pwd
-        python -m linter.main config.example.yaml
+#     - run: |
+#         echo "This is the workspace"
+#         pwd
+#         python -m linter.main config.example.yaml
         
 
