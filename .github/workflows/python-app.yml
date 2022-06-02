@@ -19,7 +19,7 @@ jobs:
         id: hello
         uses: rbob86/lookml-linter@ericfixessomestuff
         with:
-          lookMlProject: ./
+#           lookMlProject: ./
           configFile: ${{ github.workspace }}/config.example.yaml
 #     - run: |
 #         echo "This is the workspace"
