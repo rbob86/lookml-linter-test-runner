@@ -9,12 +9,18 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  hello_world_job:
     runs-on: ubuntu-latest
-
+    name: A job to say hello
     steps:
-    - uses: actions/checkout@v2
-    - uses: jdemartino78/lookml-linter@main
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Hello world action step
+        id: hello
+        uses: rbob86/lookml-linter@ericfixessomestuff
+        with:
+          lookMlProject: ./
+          configFile: ${{ github.workspace }}/config.example.yaml
 #     - run: |
 #         echo "This is the workspace"
 #         pwd
