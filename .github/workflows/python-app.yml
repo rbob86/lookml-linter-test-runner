@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v1
       - name: Run LookML Liniter
         id: linter
-        uses: jdemartino78/lookml-linter@main
+        uses: rbob86/lookml-linter@main
 #         with:
 #           lookMlProject: ./
 #           configFile: ${{ github.workspace }}/config.example.yaml
