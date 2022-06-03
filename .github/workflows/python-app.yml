@@ -18,9 +18,9 @@ jobs:
       - name: Hello world action step
         id: hello
         uses: jdemartino78/lookml-linter@main
-        with:
+#         with:
 #           lookMlProject: ./
-          configFile: ${{ github.workspace }}/config.example.yaml
+#           configFile: ${{ github.workspace }}/config.example.yaml
 #     - run: |
 #         echo "This is the workspace"
 #         pwd
