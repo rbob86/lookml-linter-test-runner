@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v1
       - name: Hello world action step
         id: hello
-        uses: rbob86/lookml-linter@ericfixessomestuff
+        uses: jdemartino78/lookml-linter@main
         with:
 #           lookMlProject: ./
           configFile: ${{ github.workspace }}/config.example.yaml
