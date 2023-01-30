@@ -4,9 +4,9 @@ name: Linter Run
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   lookml_linter:
@@ -14,7 +14,7 @@ jobs:
     name: LookML Linter
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@v3
       - name: Run LookML Liniter
         id: linter
         uses: rbob86/lookml-linter@main
@@ -25,5 +25,4 @@ jobs:
 #         echo "This is the workspace"
 #         pwd
 #         python -m linter.main config.example.yaml
-        
 
