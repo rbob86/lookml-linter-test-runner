@@ -106,7 +106,7 @@ explore: inventory_items {
   }
 }
 
-explore: orders {
+explore: orders { 
   aggregate_table: rollup__status {
     query: {
       dimensions: [id,status]
