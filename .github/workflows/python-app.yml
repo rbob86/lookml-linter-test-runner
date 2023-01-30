@@ -5,6 +5,8 @@ name: Linter Run
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - 'views/**'
   pull_request:
     branches: [main]
 
